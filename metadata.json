@@ -1,0 +1,10 @@
+{
+  "name": "FirstStep — Eclipse Lumina",
+  "description": "An empathetic, non-clinical bilingual (English & Tamil) AI emotional companion featuring Healing Through Literature, Sangam poetry, bibliotherapy, and guided next steps.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

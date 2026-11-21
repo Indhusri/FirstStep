@@ -1,0 +1,135 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Private user profile owned by the authenticated Firebase user.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "description": "Firebase Authentication UID of the owner."
+        },
+        "displayName": {
+          "type": "string",
+          "maxLength": 120,
+          "description": "User display name."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 254,
+          "description": "User email address."
+        },
+        "preferredLanguage": {
+          "type": "string",
+          "enum": ["english", "tamil", "bilingual"],
+          "description": "Preferred interface language."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "ISO timestamp when the profile was created."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "ISO timestamp when the profile was last updated."
+        }
+      },
+      "required": ["uid", "email", "preferredLanguage", "createdAt", "updatedAt"]
+    },
+    "UserPreferences": {
+      "title": "UserPreferences",
+      "description": "Onboarding and personalisation preferences owned by the authenticated user.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "description": "Firebase Authentication UID of the owner."
+        },
+        "preferredLanguage": {
+          "type": "string",
+          "enum": ["english", "tamil", "bilingual"],
+          "description": "Preferred language mode."
+        },
+        "preferredInteractionMode": {
+          "type": "string",
+          "enum": ["typing", "voice", "both", "not_sure"],
+          "description": "Preferred interaction style."
+        },
+        "selectedGoals": {
+          "type": "array",
+          "description": "User-selected areas of interest (bounded to 12 items)."
+        },
+        "preferredSupportMethods": {
+          "type": "array",
+          "description": "User-selected preferred support methods (bounded to 10 items)."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "ISO timestamp of the last preference update."
+        }
+      },
+      "required": [
+        "uid",
+        "preferredLanguage",
+        "preferredInteractionMode",
+        "selectedGoals",
+        "preferredSupportMethods",
+        "updatedAt"
+      ]
+    },
+    "UserOnboarding": {
+      "title": "UserOnboarding",
+      "description": "Tracks onboarding completion status for the authenticated user.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "description": "Firebase Authentication UID of the owner."
+        },
+        "completed": {
+          "type": "boolean",
+          "description": "Whether the user has completed onboarding."
+        },
+        "completedAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "ISO timestamp when onboarding was completed."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "ISO timestamp of the last onboarding status update."
+        }
+      },
+      "required": ["uid", "completed", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "Owner-only user profile document keyed by Firebase Auth UID."
+    },
+    "/users/{userId}/preferences/{documentId}": {
+      "schema": { "$ref": "#/entities/UserPreferences" },
+      "description": "Owner-only user preferences subcollection."
+    },
+    "/users/{userId}/onboarding/{documentId}": {
+      "schema": { "$ref": "#/entities/UserOnboarding" },
+      "description": "Owner-only onboarding completion status subcollection."
+    }
+  }
+}

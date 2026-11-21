@@ -1,0 +1,217 @@
+---
+name: Eclipse Lumina
+colors:
+  surface: '#111319'
+  surface-dim: '#111319'
+  surface-bright: '#37393f'
+  surface-container-lowest: '#0c0e13'
+  surface-container-low: '#191c21'
+  surface-container: '#1d2025'
+  surface-container-high: '#282a30'
+  surface-container-highest: '#33353b'
+  on-surface: '#e2e2ea'
+  on-surface-variant: '#ddc1b3'
+  inverse-surface: '#e2e2ea'
+  inverse-on-surface: '#2e3036'
+  outline: '#a58c7f'
+  outline-variant: '#564338'
+  surface-tint: '#ffb68d'
+  primary: '#ffb68d'
+  on-primary: '#532200'
+  primary-container: '#ff8a3d'
+  on-primary-container: '#682d00'
+  inverse-primary: '#9a4600'
+  secondary: '#ffb95f'
+  on-secondary: '#472a00'
+  secondary-container: '#ee9800'
+  on-secondary-container: '#5b3800'
+  tertiary: '#ffb693'
+  on-tertiary: '#562000'
+  tertiary-container: '#f78e57'
+  on-tertiary-container: '#6c2a00'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#ffdbc9'
+  primary-fixed-dim: '#ffb68d'
+  on-primary-fixed: '#321200'
+  on-primary-fixed-variant: '#763300'
+  secondary-fixed: '#ffddb8'
+  secondary-fixed-dim: '#ffb95f'
+  on-secondary-fixed: '#2a1700'
+  on-secondary-fixed-variant: '#653e00'
+  tertiary-fixed: '#ffdbcb'
+  tertiary-fixed-dim: '#ffb693'
+  on-tertiary-fixed: '#341000'
+  on-tertiary-fixed-variant: '#7a3000'
+  background: '#111319'
+  on-background: '#e2e2ea'
+  surface-variant: '#33353b'
+typography:
+  headline-xl:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: 48px
+    letterSpacing: -0.02em
+  headline-xl-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 30px
+    fontWeight: '700'
+    lineHeight: 38px
+    letterSpacing: -0.015em
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.015em
+  headline-lg-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 22px
+    fontWeight: '600'
+    lineHeight: 28px
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 28px
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 15px
+    fontWeight: '400'
+    lineHeight: 22px
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 18px
+  label-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 24px
+    letterSpacing: 0.01em
+  label-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '500'
+    lineHeight: 20px
+    letterSpacing: 0.02em
+  label-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.04em
+rounded:
+  sm: 0.5rem
+  DEFAULT: 1rem
+  md: 1.5rem
+  lg: 2rem
+  xl: 3rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-desktop: 1.5rem
+  margin: 1.25rem
+  margin-desktop: 2.5rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.25rem
+  space-2xl: 3.5rem
+---
+
+## Brand & Style
+
+The design system establishes an atmospheric, contemplative sanctuary grounded in ultra-dark luxury minimalism. Designed for high-end digital wellness, cognitive introspection, and neural health applications, it speaks to mindful, discerning users seeking calm clarity amidst cognitive overload.
+
+The aesthetic fuses celestial eclipse phenomena with bioluminescent neural circuitry. Organic spherical gradients, diffuse copper and amber auras, and illuminated rim borders emerge gracefully from absolute pitch-black canvases. The tone balances deep stillness with vibrant mental vitality:
+- **Introspective Depth:** Pitch-black canvases (#040507) prevent visual fatigue and create an intimate, infinite negative space.
+- **Ethereal Bioluminescence:** Radiant crescent lighting and delicate neural nodes ignite focal points without producing harsh glare.
+- **Sculpted Tactility:** Glowing pill controls, concentric orbital tracks, and dark glass card surfaces feel physically carved and magnetically charged.
+
+## Colors
+
+The palette is engineered around radiant lunar thermodynamics set against a deep cosmic void. 
+
+### Palette Architecture
+- **Primary Amber Crescent (`#FF8A3D`):** The signature vibrant copper glow, used for primary action states, focal auras, and key interactive highlights.
+- **Secondary Neural Spark (`#F59E0B`):** Bioluminescent gold employed for neural nodes, fine vector connection strokes, and secondary accents.
+- **Tertiary Burnt Bronze (`#92400E`):** Low-frequency thermal anchor used for deep gradient stops, subtle ring shadows, and inactive boundary definitions.
+- **Neutral Deep Pitch (`#07090E` / `#040507`):** The foundational substrate, absorbing ambient light and allowing illuminated elements to float with optical separation.
+
+### Functional Tinting & Glows
+- **Luminous Edge Strokes:** Semi-transparent linear highlights (`linear-gradient(180deg, rgba(255, 138, 61, 0.45) 0%, rgba(255, 138, 61, 0.05) 100%)`) define physical borders.
+- **Aura Radial Gradients:** Extended background blurs utilizing soft spherical radials (`radial-gradient(circle, rgba(232, 114, 40, 0.28) 0%, rgba(7, 9, 14, 0) 70%)`) to create the characteristic eclipse rim atmosphere.
+- **Text Contrast System:** Pure high-contrast stark white (`#FFFFFF`) for primary headings, warming down to muted amber-sand (`#D1A98E`) for secondary supporting text, and soft charcoal (`#64748B`) for disabled or tertiary captions.
+
+## Typography
+
+The typography system relies on **Plus Jakarta Sans** across all levels. Its balanced geometric construction and subtle humanist terminal curves balance technical precision with warm approachability.
+
+- **Headlines:** Set in high-contrast solid white (`#FFFFFF`) with tight negative tracking to maintain bold punch and authority against dark spatial backgrounds. On hero onboarding sequences, major titles incorporate a diffuse amber text-shadow (`text-shadow: 0 0 24px rgba(255, 138, 61, 0.35)`).
+- **Body & Paragraphs:** Rendered in softened bone and warm sand tones (`rgba(253, 186, 116, 0.85)` or `#CBD5E1`) with generous line-heights to ensure effortless legibility.
+- **Labels & Overlines:** Tracked out, rendered in medium to semibold weights, frequently paired with pill-shaped translucent micro-badges to organize conversational flows.
+
+## Layout & Spacing
+
+The layout is built around deliberate vertical pacing and centered focal balance, drawing the eye toward cosmic glowing rings, crescent light arcs, and sculpted bottom-sheet action targets.
+
+- **Grid Architecture:** 
+  - Mobile employs a single-column, fluid stack with `1.25rem` margins and `1rem` gutters.
+  - Tablet and desktop expand to an 8 or 12-column centered layout constrained to a maximum content width of 680px for focused conversational flows, or 1120px for dashboard data representations.
+- **Vertical Hierarchy:** Large expressive negative spaces (`space-2xl`) surround visual hero centers (e.g., celestial eclipse illustrations, neural maps), creating a spacious temple-like breathing room before interactive controls begin.
+- **Safe Area Anchoring:** Primary action pills and sliding controls anchor consistently to the viewport footer, framed with subtle upward-diffusing black-to-transparent scrims.
+
+## Elevation & Depth
+
+Visual hierarchy is constructed entirely through **tonal luminescence, specular rim highlights, and atmospheric glassmorphism**, rejecting conventional flat gray shadows.
+
+### Surface Elevation Layers
+1. **Base Cosmic Void (0dp):** Pitch black `#040507` baseline canvas.
+2. **Atmospheric Aura Layer (1dp):** Backing celestial discs, eclipse crescent blends, and particle network lines suspended in deep field blur (`blur(32px)` to `blur(64px)`).
+3. **Mantle Surface Cards (2dp):** Charcoal obsidian `#0D1017` with 60% opacity, layered over `backdrop-filter: blur(20px)` and framed with a dual stroke: an illuminated copper-to-transparent top border (`rgba(255, 138, 61, 0.3)`) and an ultra-subtle base border (`rgba(255, 255, 255, 0.04)`).
+4. **Interactive Kinetic Floating (3dp):** Elevated glowing pills and focus modules feature inner radial reflections and soft external amber drop auras (`box-shadow: 0 12px 32px -4px rgba(232, 114, 40, 0.45), 0 0 16px rgba(255, 138, 61, 0.25)`).
+
+### Rim Light Mechanics
+Surfaces mimic edge lighting: top outer edges catch radiant copper light from overhead lunar crescents, while lower edges fade softly into background void shadows.
+
+## Shapes
+
+The shape system adopts a fluid, pill-centric geometry (Level 3), mirroring orbital ellipses and gentle human biological forms.
+
+- **Primary Interactive Targets:** Full continuous stadium/pill geometries (`border-radius: 9999px`) provide tactile, pebble-like ergonomics for buttons, input triggers, and slider nubs.
+- **Cards & Surfaces:** Rounded with generous 24px (`1.5rem`) to 32px (`2rem`) radiuses to evoke polished obsidian pebbles.
+- **Concentric Orbits:** Graphic features and progress states utilize nested concentric circular paths, lending astronomical precision to progress indications.
+
+## Components
+
+### Buttons & Interactive Triggers
+- **Primary Eclipse Glow Button:** Full pill shape, layered with an internal top-to-bottom copper gradient (`linear-gradient(180deg, #E87228 0%, #78350F 100%)`), framed with a crisp illuminated top border (`1px solid rgba(255, 255, 255, 0.35)`), and accented by an external radial amber halo. Centered bold text in pure white.
+- **Secondary Ghost Pill Button:** Translucent base (`rgba(13, 16, 23, 0.6)`) surrounded by a hairline contour (`1px solid rgba(255, 138, 61, 0.25)`). Hover states elevate border brightness to 60% opacity with an inner amber mist.
+- **Orbital Sliding Action:** Vertical pill capsule with chevron guides and a glowing circular thumb slider ('Go'), simulating physical celestial docking.
+
+### Input Fields
+- **Obsidian Recessed Fields:** Heightened pill container (`52px` height) with a deeply recessed dark fill (`rgba(10, 13, 19, 0.7)`).
+- **Hairline Border:** Resting border at `1px solid rgba(255, 255, 255, 0.08)`. On focus, the border transitions smoothly into glowing copper (`1px solid #FF8A3D`) with a soft localized amber diffuse glow (`box-shadow: 0 0 12px rgba(255, 138, 61, 0.2)`).
+- **Placeholder & Text:** Inputs use `body-md` in warm muted sand (`#94A3B8`), shifting to crisp `#FFFFFF` upon typing.
+
+### Chips & Micro-Badges
+- **Translucent Assistant Badges:** Compact pills with dark smoke fill (`rgba(255, 255, 255, 0.05)`), subtle hairline perimeter, and micro-typography in muted copper (`#FDBA74`). Used for section categorizations, assistant indicators, and conversational tags.
+
+### Neural Cards & Interactive Containers
+- **Frosted Eclipse Cards:** 24px border radius with `backdrop-filter: blur(16px)` and ultra-subtle amber rim lighting.
+- **Social & Quick Action Circles:** Pill or perfect circular buttons housing identity icons with ambient backlit glows on touch interactions.
+
+### Neural Node & Particle Visualizers
+- **Constellation Connectors:** Hairline vector lines (`rgba(245, 158, 11, 0.15)`) connecting golden glowing junction nodes (`#F59E0B`), accented with multi-tier radial bloom rings to represent cognitive links and energetic states.

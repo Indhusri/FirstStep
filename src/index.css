@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-tamil: "Noto Serif Tamil", Georgia, serif;
+
+  --color-void: #040507;
+  --color-pitch: #07090e;
+  --color-surface: #111319;
+  --color-surface-low: #191c21;
+  --color-surface-container: #1d2025;
+  --color-surface-high: #282a30;
+  --color-amber-crescent: #ff8a3d;
+  --color-amber-soft: #ffb68d;
+  --color-neural-gold: #f59e0b;
+  --color-burnt-bronze: #92400e;
+  --color-sand: #ddc1b3;
+  --color-muted-sand: #d1a98e;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #040507;
+    color: #e2e2ea;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #040507;
+    overflow-x: hidden;
+  }
+}
+
+.font-tamil {
+  font-family: var(--font-tamil);
+}
+
+/* Eclipse Lumina Signature Surfaces */
+.eclipse-card {
+  background: rgba(13, 16, 23, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 138, 61, 0.28);
+  box-shadow: 0 20px 50px -24px rgba(0, 0, 0, 0.85);
+}
+
+.eclipse-button-primary {
+  background: linear-gradient(180deg, #e87228 0%, #78350f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 10px 28px -6px rgba(232, 114, 40, 0.48),
+    0 0 16px rgba(255, 138, 61, 0.22);
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1), filter 180ms ease;
+}
+
+.eclipse-button-primary:hover:not(:disabled) {
+  filter: brightness(1.08);
+  box-shadow:
+    0 14px 34px -4px rgba(232, 114, 40, 0.6),
+    0 0 22px rgba(255, 138, 61, 0.32);
+}
+
+.eclipse-button-primary:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+.eclipse-button-ghost {
+  background: rgba(13, 16, 23, 0.65);
+  border: 1px solid rgba(255, 138, 61, 0.24);
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.eclipse-button-ghost:hover:not(:disabled) {
+  border-color: rgba(255, 138, 61, 0.55);
+  background: rgba(255, 138, 61, 0.08);
+}
+
+.eclipse-input {
+  background: rgba(10, 13, 19, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.eclipse-input:focus {
+  outline: none;
+  border-color: #ff8a3d;
+  box-shadow: 0 0 14px rgba(255, 138, 61, 0.22);
+}
+
+.eclipse-title-glow {
+  text-shadow: 0 0 28px rgba(255, 138, 61, 0.3);
+}
+
+.eclipse-aura {
+  background: radial-gradient(
+    circle,
+    rgba(255, 160, 92, 0.34) 0%,
+    rgba(232, 114, 40, 0.22) 34%,
+    rgba(146, 64, 14, 0.1) 56%,
+    rgba(4, 5, 7, 0) 76%
+  );
+}
+
+@keyframes celestialDrift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(8px, -14px, 0);
+  }
+  100% {
+    transform: translate3d(-6px, -24px, 0);
+  }
+}
+
+@keyframes celestialTwinkle {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.92;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .celestial-particle {
+    animation: none !important;
+    opacity: 0.55 !important;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 138, 61, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 138, 61, 0.38);
+}
